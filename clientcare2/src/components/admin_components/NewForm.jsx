@@ -19,15 +19,27 @@ const NewForm = () => {
         <div className="form-list space-y-4">
           <Link to="/create-form" className="form-box block p-4 border border-gray-300 rounded shadow text-white"
           style={{ transition: 'background-color 0.3s', backgroundColor : '#4c8f97' }}
-          onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#ffffff'}
-          onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#4c8f97'}>
+          onMouseEnter={(e) => {
+            e.currentTarget.style.backgroundColor = '#ffffff'
+            e.currentTarget.style.color = '#4c8f97'
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.backgroundColor = '#4c8f97'
+            e.currentTarget.style.color = '#ffffff'
+          }}>
             + Create New Form +
           </Link>
           {forms.map((form, index) => (
             <Link key={index} to={`/form/${encodeURIComponent(form)}`} className="form-box block p-4 border border-gray-300 rounded shadow text-white"
             style={{ transition: 'background-color 0.3s', backgroundColor : '#4c8f97'  }}
-  onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#ffffff'}
-  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#4c8f97'}>
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = '#ffffff'
+              e.currentTarget.style.color = '#4c8f97'
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = '#4c8f97'
+              e.currentTarget.style.color = '#ffffff'
+            }}>
               {form}
             </Link>
           ))}

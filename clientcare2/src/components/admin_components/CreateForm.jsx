@@ -40,30 +40,39 @@ export default function CreateForm() {
 
   return (
     <div className="flex min-h-screen relative">
-      <div className="fixed left-0 w-1/5 h-full bg-gray-800" style={{ backgroundColor: '#3a696e' }}></div>
+      <div className="fixed left-0 w-1/5 h-full" style={{ backgroundColor: '#3a696e' }}></div>
       <div className="w-3/5 p-4 mx-auto">
         <div className="mb-4 shadow-top">
-          <label htmlFor="form-title" className="block text-center mb-2">Form Title:</label>
+          <h1 className="text-2xl font-bold mb-4">Create a New Form</h1>
+          <label htmlFor="form-title" className="block text-center mb-2 font-bold">Form Title:</label>
           <input
             id="form-title"
             type="text"
             value={formTitle}
             onChange={(e) => setFormTitle(e.target.value)}
-            className="block mx-auto mb-4 p-2 border border-gray-300 rounded w-1/2 text-black bg-white"
+            className="block mx-auto mb-4 p-2 border border-gray-300 rounded w-full text-black bg-white"
           />
         </div>
         <div className="mb-4">
           <button
             onClick={addQuestion}
-            className="bg-blue-500 text-white rounded-full p-2 mb-4"
-          >
+            className="border rounded px-4 py-2 mb-4"
+            style={{ transition: 'background-color 0.3s, color 0.3s', backgroundColor: '#a26b61' }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = '#ffffff'
+              e.currentTarget.style.color = '#a26b61'
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = '#a26b61'
+              e.currentTarget.style.color = '#ffffff'
+            }}>
             + Add Question
           </button>
           {questions.map((question, index) => (
             <div key={index} className="mb-2">
               <input
                 type="text"
-                value={question}
+                value={question.value}
                 onChange={(e) => handleQuestionChange(index, e.target.value)}
                 className="block w-full p-2 border border-gray-300 rounded bg-white text-black"
                 placeholder={`Question ${index + 1}`}
@@ -72,31 +81,40 @@ export default function CreateForm() {
           ))}
         </div>
         <div>
-          <label htmlFor="receipients-title" className="block text-center mb-2">Choose Recipients:</label>
-          <Select
-            id="patient-select"
-            name="patient-group"
-            options={[{ value: 'patients-who', label: 'Patients who attended...' }, ...patientOptions]}
-            onChange={handlePatientGroupChange}
-            className="mb-4"
-          />
-          {showEventDropdown && (
-          <Select
-            id="event-select"
-            name="event-group"
-            options={eventOptions}
-            className="mb-4"
-          />
-        )} 
-        <button className="bg-white text-purple-500 border border-purple-500 rounded px-4 py-2 hover:bg-purple-100">
-          Send Form
-        </button>
-    </div>
-    
+          <label htmlFor="receipients-title" className="block text-center mb-2 font-bold">Choose Form Recipients:</label>
+          <div className="flex space-x-4 mb-4">
+            <Select
+              id="patient-select"
+              name="patient-group"
+              options={[{ value: 'patients-who', label: 'Patients who attended...' }, ...patientOptions]}
+              onChange={handlePatientGroupChange}
+              className="flex-1"
+            />
+            {showEventDropdown && (
+              <Select
+                id="event-select"
+                name="event-group"
+                options={eventOptions}
+                className="flex-1"
+              />
+            )}
+          </div>
+          <button
+  className="form-box block mx-auto p-4 border border-gray-300 rounded shadow text-white font-bold"
+  style={{ transition: 'background-color 0.3s, color 0.3s', backgroundColor: '#4c8f97' }}
+    onMouseEnter={(e) => {
+      e.currentTarget.style.backgroundColor = '#ffffff'
+      e.currentTarget.style.color = '#4c8f97'
+    }}
+    onMouseLeave={(e) => {
+      e.currentTarget.style.backgroundColor = '#4c8f97'
+      e.currentTarget.style.color = '#ffffff'
+    }}>
+  Send Form
+</button>
+        </div>
       </div>
       <div className="fixed right-0 w-1/5 h-full" style={{ backgroundColor: '#3a696e' }}></div>
-
     </div>
-    
   )
 }
