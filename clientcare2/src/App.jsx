@@ -5,6 +5,7 @@ import './App.css'
 import UserHome from './components/user_components/UserHome'
 import { Route, Routes } from 'react-router-dom'
 import Navbar from './components/user_components/Navbar'
+import Dashboard from './components/admin_components/Dashboard.tsx';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<UserHome/>}/>
         <Route path="/forms" element={<></>}/>
-        <Route path="/dashboard" element={<></>}/>
+        <Route path="/dashboard" element={<Dashboard/>}/>
         <Route path="/profile" element={<></>}/>
       </Routes>
     </>
