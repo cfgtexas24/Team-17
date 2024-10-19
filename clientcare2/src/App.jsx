@@ -2,9 +2,9 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import UserHome from './components/UserHome'
+import UserHome from './components/user_components/UserHome'
 import { Route, Routes } from 'react-router-dom'
-import Navbar from './components/Navbar'
+import Navbar from './components/user_components/Navbar'
 
 function App() {
   return (
