@@ -1,0 +1,43 @@
+form {
+    display: flex;
+    flex-direction: column;
+    width: 400px; /* Set a width for the form */
+    margin: 0 auto; /* Center the form */
+}
+
+.custom-button {
+    color: white;
+    background-color: #3a696e;
+}
+
+
+div {
+    margin-bottom: 10px; /* Space between each label-input pair */
+}
+
+label {
+    margin-right: 10px; /* Space between label and input */
+    display: inline-block; /* Keep labels next to inputs */
+    width: 200px; /* Adjust as needed */
+}
+
+input, textarea {
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px; /* Slightly rounded corners */
+    padding: 8px; /* Padding inside the input */
+    width: calc(100% - 220px); /* Full width minus label width and margins */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    font-size: 14px; /* Font size for inputs */
+    background-color: white;
+    color: black;
+}
+
+input:focus, textarea:focus {
+    border-color: #66afe9; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resizing of textarea */
+    height: 80px; /* Default height for textareas */
+}

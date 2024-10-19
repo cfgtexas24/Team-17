@@ -1,0 +1,47 @@
+.calendar-container {
+  display: flex;
+  flex-direction: row; /* Change to row to align items horizontally */
+  justify-content: space-between; /* Space out the children */
+  align-items: flex-start; /* Align items to the top */
+  margin-top: 50px;
+  width: 100%;
+}
+
+.calendar-container h1 {
+  color: #3a696e;
+  font-weight: bold;
+}
+
+.appointment-list {
+  margin-top: 20px;
+  width: 100%;
+  text-align: left;
+}
+
+title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  width: 45%; /* Adjust width as needed */
+}
+
+li {
+  padding: 10px;
+  background-color: #f0f0f0;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+/* You might want to add some spacing to the Calendar component */
+.react-calendar {
+  margin-top: 50px;
+  width: 45%; /* Adjust width as needed */
+}
+
+.calendar-container sub{
+  
+}

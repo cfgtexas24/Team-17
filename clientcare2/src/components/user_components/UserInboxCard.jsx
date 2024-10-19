@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { Bell } from 'lucide-react'
 
 const notifications = [
@@ -15,21 +16,32 @@ const clickForm = (formId) => {
 const UserInboxCard = () => {
   return (
     <>
-    <div className="shadow-lg mt-32 bg-gray-100 rounded-lg p-6 w-2/5 h-72">
-          <h2 className="text-xl flex font-semibold mb-4 items-center">
-            <Bell className="mr-7" />
+    <div className="shadow-lg mt-32 bg-[#5c8489] rounded-lg p-6 w-2/5 h-96">
+          <h2 className="text-white text-xl flex font-semibold mb-4 items-center">
+            <Bell className="mr-7 text-white" />
             Notification Inbox
           </h2>
           <ul>
-            {notifications.map((notification) => (
-                <li key={notification.id} 
-                    className="mb-2 p-2 bg-gray-200 rounded-lg hover:bg-white hover:shadow-sm"
-                    onClick={() => clickForm(notification.formId)}
-                >
+          {notifications.map((notification) => (
+          <li
+            key={notification.id}
+            className={`mb-2 p-2 rounded-lg hover:bg-white hover:shadow-sm ${
+              notification.id === 3 ? 'bg-pink-200' : 'bg-gray-200'
+            }`}
+          >
+            {notification.id === 3 ? (
+              <Link to="/form/mockForm" className="block">
                 <p>{notification.message}</p>
                 <p className="text-sm text-gray-600">{notification.date}</p>
-              </li>
-            ))}
+              </Link>
+            ) : (
+              <div onClick={() => clickForm(notification.formId)}>
+                <p>{notification.message}</p>
+                <p className="text-sm text-gray-600">{notification.date}</p>
+              </div>
+            )}
+          </li>
+        ))}
           </ul>
     </div>
     </>
