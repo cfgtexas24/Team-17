@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Select from 'react-select'
+import {createForm} from '../../backend/googleFormsAPI/requests'
 
 /************************************************** */
 // PULL THESE FROM THE BACKEND
@@ -18,13 +19,20 @@ const patientOptions = [
   /************************************************ */
   //this shows the Create Form page, specifically the "Send Form" button and options
 export default function CreateForm() {
-    const [selectedPatientGroup, setSelectedPatientGroup] = useState('')
+  const [selectedPatientGroup, setSelectedPatientGroup] = useState('')
   const [showEventDropdown, setShowEventDropdown] = useState(false)
+  const [loading, setLoading] = useState(false)
 
   const handlePatientGroupChange = (selectedOption) => {
     const value = selectedOption ? selectedOption.value : ''
     setSelectedPatientGroup(value)
     setShowEventDropdown(value === 'patients-who')
+  }
+
+  const handleCreateForm = async () => {
+    setLoading(true)
+    await createForm()
+    setLoading(false)
   }
 
   return (
@@ -48,8 +56,12 @@ export default function CreateForm() {
         )}
       </div>
       <div>
-        <button className="bg-white text-purple-500 border border-purple-500 rounded px-4 py-2 hover:bg-purple-100">
-          Send Form
+        <button
+          onClick={handleCreateForm}
+          className="bg-white text-purple-500 border border-purple-500 rounded px-4 py-2 hover:bg-purple-100"
+          disabled={loading}
+        >
+          {loading ? 'Creating...' : 'Send Form'}
         </button>
       </div>
     </div>
