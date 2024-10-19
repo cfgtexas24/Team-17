@@ -1,8 +1,16 @@
 import React from 'react'
+import Navbar from './Navbar'
+import UserProfileCard from './UserProfileCard'
+import UserInboxCard from './UserInboxCard'
 
 const UserHome = () => {
   return (
-    <div className='text-black'>User Home</div>
+    <>
+      <div className='flex flex-row justify-evenly'>
+        <UserProfileCard />
+        <UserInboxCard />
+      </div>
+    </>
   )
 }
 
