@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { Bell } from 'lucide-react'
 
 const notifications = [
@@ -21,15 +22,26 @@ const UserInboxCard = () => {
             Notification Inbox
           </h2>
           <ul>
-            {notifications.map((notification) => (
-                <li key={notification.id} 
-                    className="mb-2 p-2 bg-gray-200 rounded-lg hover:bg-white hover:shadow-sm"
-                    onClick={() => clickForm(notification.formId)}
-                >
+          {notifications.map((notification) => (
+          <li
+            key={notification.id}
+            className={`mb-2 p-2 rounded-lg hover:bg-white hover:shadow-sm ${
+              notification.id === 3 ? 'bg-pink-200' : 'bg-gray-200'
+            }`}
+          >
+            {notification.id === 3 ? (
+              <Link to="/form/mockForm" className="block">
                 <p>{notification.message}</p>
                 <p className="text-sm text-gray-600">{notification.date}</p>
-              </li>
-            ))}
+              </Link>
+            ) : (
+              <div onClick={() => clickForm(notification.formId)}>
+                <p>{notification.message}</p>
+                <p className="text-sm text-gray-600">{notification.date}</p>
+              </div>
+            )}
+          </li>
+        ))}
           </ul>
     </div>
     </>

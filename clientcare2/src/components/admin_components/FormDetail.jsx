@@ -16,6 +16,12 @@ const eventOptions = [
   { value: 'event-3', label: 'Event 3' }
 ]
 
+const questions = [
+  { value: 'question-1', label: 'What was most useful for you from this class?' },
+  { value: 'question-2', label: 'What wa least useful for you from this class?' },
+  { value: 'question-3', label: 'How much do you agree with the following statement: I now feel more prepare for giving birth after this session.' }
+]
+
 /************************************************** */
 //this page shows the form details, specifically the "Send Form" button and options
 const FormDetailPage = ({ formName }) => {
@@ -31,8 +37,13 @@ const FormDetailPage = ({ formName }) => {
   return (
     <div className="p-4">
       <h1 className="text-2xl font-bold mb-4">{formName}</h1>
+      {questions.map((question, index) => (
+          <div key={index} className="block w-full p-2 border border-gray-300 rounded bg-white text-black mb-4">
+            {question.label}
+          </div>
+        ))}
       <div className="mb-4">
-        <label htmlFor="patient-select" className="block mb-2">Select Patient Group:</label>
+        <label htmlFor="patient-select" className="block mb-2">Select Recipient:</label>
         <Select
           id="patient-select"
           name="patient-group"

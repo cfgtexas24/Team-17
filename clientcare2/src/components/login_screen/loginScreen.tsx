@@ -17,13 +17,13 @@ const LoginFunc = () => {
   };
 
   return (
-    <div className='login-page'>
-      <h2>Login Page</h2>
-      <div className="button-group">
-        <button className='login-btn' onClick={() => handleLogin('user')}>
+    <div className='login-page mt-48'>
+      <h2 className='text-3xl font-bold mb-5'>Login Page</h2>
+      <div className="button-group space-x-8 space-y-4">
+        <button className='login-btn text-white font-semibold hover:bg-white hover:text-black' onClick={() => handleLogin('user')}>
           Log in User
         </button>
-        <button className='login-btn' onClick={() => handleLogin('admin')}>
+        <button className='login-btn text-white font-semibold hover:bg-white hover:text-black' onClick={() => handleLogin('admin')}>
           Log in Admin
         </button>
       </div>
