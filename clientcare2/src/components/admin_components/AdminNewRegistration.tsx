@@ -46,7 +46,7 @@ const AdminNewRegistration: React.FC = () => {
             {showChart && (
                 <div>
                     <PatientChart patient={selectedPatient} onHide={handleHideChart} />
-                    <button  onClick={handleHideChart}>Hide Patient Chart</button>
+                    <button onClick={handleHideChart}className='custom-button'>Hide Patient Chart</button>
                 </div>
             )}
         </div>
