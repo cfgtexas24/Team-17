@@ -12,7 +12,6 @@ const Dashboard = () => {
             fontFamily: 'Arial, sans-serif',
             padding: '20px',
             borderRadius: '10px',
-            backgroundColor: 'white',
             boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
             textAlign: 'center',
             marginTop: '20px' /* Add a margin to push it slightly down from the top */
