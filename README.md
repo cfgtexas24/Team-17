@@ -1,6 +1,6 @@
-****Abide & Seek - Medical Platform****
+****Abide&Seek - Medical Platform****
 
-Abide & Seek is an all-in-one medical platform designed to streamline patient management, offering healthcare professionals an efficient solution for patient filtering, enabling targeted care and interventions to help reduce fetal mortality rates. The platform prioritizes simplicity and comprehensiveness to enhance the delivery of critical medical services.
+Abide&Seek is an all-in-one medical platform designed to streamline patient management, offering healthcare professionals an efficient solution for patient filtering, enabling targeted care and interventions to help reduce fetal mortality rates. The platform prioritizes simplicity and comprehensiveness to enhance the delivery of critical medical services.
 
 **Features**
 
