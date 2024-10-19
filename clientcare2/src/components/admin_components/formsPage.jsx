@@ -104,7 +104,7 @@ function FormsPage() {
     <div>
         <Router>
           <Routes>
-            <Route path="/" element={<FormsPageLanding />} />
+            <Route path="/formsPage" element={<FormsPageLanding />} />
             <Route path="/create-form" element={<CreateFormPage />} />
             <Route path="/form/:formName" element={<FormDetailPageWrapper />} />
           </Routes>
