@@ -1,7 +1,6 @@
-import './formsPage.css'
+
 import { useState } from 'react'
 import { BrowserRouter as Router, Route, Routes, Link, useParams } from 'react-router-dom'
-
 /***************************************************************************** */
 // PULL THESE FROM THE BACKEND
 const forms = [
@@ -24,7 +23,7 @@ const eventOptions = [
 /************************************************************************* */
 //defining a FormsPage component
 //this component will display a list of forms and each is linked to a form detail page
-const FormsPage = () => {
+const FormsPageLanding = () => {
   return (
     <div>
       <div>
@@ -93,22 +92,26 @@ const FormDetailPage = ({ formName }) => {
   )
 }
 
-//runs the app
-function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<FormsPage />} />
-        <Route path="/create-form" element={<CreateFormPage />} />
-        <Route path="/form/:formName" element={<FormDetailPageWrapper />} />
-      </Routes>
-    </Router>
-  )
-}
-
 const FormDetailPageWrapper = () => {
   const { formName } = useParams()
   return <FormDetailPage formName={decodeURIComponent(formName)} />
 }
 
-export default App
+/*************************************************************** */
+//runs the app
+function FormsPage() {
+  return (
+    <div>
+        <Router>
+          <Routes>
+            <Route path="/" element={<FormsPageLanding />} />
+            <Route path="/create-form" element={<CreateFormPage />} />
+            <Route path="/form/:formName" element={<FormDetailPageWrapper />} />
+          </Routes>
+        </Router>
+    </div>
+    
+  )
+}
+
+export default FormsPage
