@@ -47,7 +47,7 @@ function AdminApp() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/forms" element={<Reports />} />
+          <Route path="/forms/*" element={<Reports />} />
           <Route path="/profile" element={<Profile />} />
         </Routes>
       </main>
