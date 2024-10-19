@@ -27,7 +27,7 @@ function App() {
         <Route path="/page/user" element={<UserHome/>}/>
         <Route path="/page/admin" element={<Dashboard/>}/>
 
-        <Route path="/forms" element={<FormsPage />} />
+        <Route path="/formsPage" element={<FormsPage />} />
         <Route path="/create-form" element={<CreateFormPage />} />
         <Route path="/form/:formName" element={<FormDetail />} />
         <Route path="/calendar" element={<DoctorCalendar />} />
