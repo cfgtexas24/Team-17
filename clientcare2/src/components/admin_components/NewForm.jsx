@@ -17,11 +17,17 @@ const NewForm = () => {
       <div className="w-3/5 p-4 mx-auto">
         <h1 className="text-2xl font-bold mb-4">Available Forms</h1>
         <div className="form-list space-y-4">
-          <Link to="/create-form" className="form-box block p-4 border border-gray-300 rounded shadow hover:bg-gray-100">
+          <Link to="/create-form" className="form-box block p-4 border border-gray-300 rounded shadow text-white"
+          style={{ transition: 'background-color 0.3s', backgroundColor : '#4c8f97' }}
+          onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#ffffff'}
+          onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#4c8f97'}>
             + Create New Form +
           </Link>
           {forms.map((form, index) => (
-            <Link key={index} to={`/form/${encodeURIComponent(form)}`} className="form-box block p-4 border border-gray-300 rounded shadow hover:bg-gray-100">
+            <Link key={index} to={`/form/${encodeURIComponent(form)}`} className="form-box block p-4 border border-gray-300 rounded shadow text-white"
+            style={{ transition: 'background-color 0.3s', backgroundColor : '#4c8f97'  }}
+  onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#ffffff'}
+  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#4c8f97'}>
               {form}
             </Link>
           ))}
