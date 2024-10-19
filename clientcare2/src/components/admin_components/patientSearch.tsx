@@ -175,8 +175,8 @@ const PatientSearch: React.FC = () => {
   }, [searchTerm, searchField]);
 
   return (
-    <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
-      <h1>Patient Search</h1>
+    <div style={{ padding: '25px', fontFamily: 'Arial, sans-serif' }}>
+      <h1 style={{ color: '#3e6967' }}>Patient Search</h1>
 
       {/* Search Input */}
       <input
