@@ -7,7 +7,7 @@ import Navbar from './components/user_components/Navbar'
 import FormsPage from './components/admin_components/NewForm'
 import CreateFormPage from './components/admin_components/CreateForm'
 import FormDetail from './components/admin_components/FormDetail'
-import Dashboard from './components/admin_components/Dashboard.tsx';
+import Dashboard from './components/admin_components/Dashboard.tsx'
 
 function App() {
   return (
