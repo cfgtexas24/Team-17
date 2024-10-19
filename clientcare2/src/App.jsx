@@ -1,10 +1,11 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import UserHome from './components/user_components/UserHome'
 import { Route, Routes } from 'react-router-dom'
 import Navbar from './components/user_components/Navbar'
+import FormsPage from './components/admin_components/NewForm'
+import CreateFormPage from './components/admin_components/CreateForm'
+import FormDetail from './components/admin_components/FormDetail'
 
 function App() {
   return (
@@ -12,9 +13,11 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path="/" element={<UserHome/>}/>
-        <Route path="/forms" element={<></>}/>
+        <Route path="/forms" element={<FormsPage/>}/>
         <Route path="/dashboard" element={<></>}/>
         <Route path="/profile" element={<></>}/>
+        <Route path="/create-form" element={<CreateFormPage />} />
+        <Route path="/form/:formName" element={<FormDetail />} />
       </Routes>
     </>
   )
