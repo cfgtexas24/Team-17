@@ -2,8 +2,11 @@
 import React from 'react';
 
 const Dashboard = () => {
-  // Placeholder component for Dashboard page
-  return <h1 className="text-2xl font-bold">Dashboard</h1>;
+  return (
+    <div className="h-screen w-full bg-white">
+      {/* This page is intentionally left blank */}
+    </div>
+  );
 };
 
 export default Dashboard;
