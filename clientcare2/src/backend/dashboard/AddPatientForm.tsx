@@ -140,7 +140,8 @@ const AddPatientForm: React.FC<AddPatientFormProps> = ({ onAddPatient }) => {
             <input type="date" name="appointment.date" value={appointment.date} placeholder="Appointment Date" onChange={handleChange} />
             <input type="text" name="appointment.notes" value={appointment.notes} placeholder="Notes" onChange={handleChange} />
             <input type="text" name="appointment.doctor" value={appointment.doctor} placeholder="Doctor" onChange={handleChange} />
-            <button type="button" onClick={handleAddAppointment}>Add Appointment</button>
+            <button type="button" onClick={handleAddAppointment} className="custom-button">Add Appointment</button>
+
 
             <h4>Appointments History</h4>
             <ul>
@@ -148,7 +149,7 @@ const AddPatientForm: React.FC<AddPatientFormProps> = ({ onAddPatient }) => {
                     appt.doctor && ( // Only display doctor's visits
                         <li key={index}>
                             {appt.date} - {appt.notes} with {appt.doctor}
-                            <button type="button" onClick={() => handleRemoveAppointment(index)}>Remove</button>
+                            <button type="button" onClick={() => handleRemoveAppointment(index)} className='custom-button'>Remove</button>
                         </li>
                     )
                 ))}
@@ -158,7 +159,7 @@ const AddPatientForm: React.FC<AddPatientFormProps> = ({ onAddPatient }) => {
             <input type="date" name="event.date" value={event.date} placeholder="Event Date" onChange={handleChange} />
             <input type="text" name="event.notes" value={event.notes} placeholder="Notes" onChange={handleChange} />
             <input type="text" name="event.event" value={event.event} placeholder="Event" onChange={handleChange} />
-            <button type="button" onClick={handleAddEvent}>Add Event</button>
+            <button type="button" onClick={handleAddEvent} className='custom-button'>Add Event</button>
 
             <h4>Event List</h4>
             <ul>
@@ -172,7 +173,7 @@ const AddPatientForm: React.FC<AddPatientFormProps> = ({ onAddPatient }) => {
                 ))}
             </ul>
 
-            <button type="submit">Add Patient</button>
+            <button type="submit" >Add Patient</button>
         </form>
     );
 };

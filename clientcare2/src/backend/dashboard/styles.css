@@ -5,6 +5,12 @@ form {
     margin: 0 auto; /* Center the form */
 }
 
+.custom-button {
+    color: white;
+    background-color: gray;
+}
+
+
 div {
     margin-bottom: 10px; /* Space between each label-input pair */
 }
@@ -22,6 +28,8 @@ input, textarea {
     width: calc(100% - 220px); /* Full width minus label width and margins */
     box-sizing: border-box; /* Include padding and border in element's total width and height */
     font-size: 14px; /* Font size for inputs */
+    background-color: white;
+    color: black;
 }
 
 input:focus, textarea:focus {
