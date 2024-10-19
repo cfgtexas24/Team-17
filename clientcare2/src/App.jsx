@@ -14,14 +14,11 @@ function App() {
     <>
       <Navbar/>
       <Routes>
-        <Route path="/" element={<LoginFunc/>}/>
-        <Route path="/forms" element={<></>}/>
-        <Route path="/dashboard" element={<Dashboard/>}/>
+        <Route path="/" element={<UserHome/>}/>
+        <Route path="/dashboard" element={<></>}/>
         <Route path="/profile" element={<></>}/>
-        <Route path="/page/user" element={<UserHome/>}/>
-        <Route path="/page/admin" element={<Dashboard/>}/>
 
-        <Route path="/formsPage" element={<FormsPage/>}/>
+        <Route path="/forms" element={<FormsPage/>}/>
         <Route path="/create-form" element={<CreateFormPage />} />
         <Route path="/form/:formName" element={<FormDetail />} />
       </Routes>
