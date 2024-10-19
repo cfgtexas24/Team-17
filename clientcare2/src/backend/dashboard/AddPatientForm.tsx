@@ -173,7 +173,7 @@ const AddPatientForm: React.FC<AddPatientFormProps> = ({ onAddPatient }) => {
                 ))}
             </ul>
 
-            <button type="submit" >Add Patient</button>
+            <button type="submit" className='custom-button'>Add Patient</button>
         </form>
     );
 };
