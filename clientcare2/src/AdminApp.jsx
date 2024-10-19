@@ -1,14 +1,16 @@
+// clientcare2/src/App.jsx
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from "./components/Navbar";
-import Dashboard from "./components/Dashboard";
-import Reports from "./components/Reports";
-import Profile from "./components/Profile";
+import Navbar from "./components/AdminNavbar";
+import Dashboard from "./components/AdminDashBoard";
+import Reports from "./components/AdminReports";
+import Profile from "./components/AdminProfile";
 
 function App() {
   return (
     <Router>
-      <div className="flex min-h-screen">
-        <main className="flex-grow pr-16"> {/* Add right padding to accommodate the navbar */}
+      <div className="flex">
+        <Navbar />
+        <main className="flex-grow">
           <Routes>
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/reports" element={<Reports />} />
@@ -16,7 +18,6 @@ function App() {
             <Route path="/" element={<Dashboard />} />
           </Routes>
         </main>
-        <Navbar />
       </div>
     </Router>
   );
