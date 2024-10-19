@@ -1,4 +1,4 @@
-import './components/formsPage.css'
+import './formsPage.css'
 import { BrowserRouter as Router, Route, Routes, Link, useParams } from 'react-router-dom'
 
 // PULL THIS FROM THE BACKEND
