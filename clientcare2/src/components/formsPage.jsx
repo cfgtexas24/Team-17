@@ -34,6 +34,13 @@ const CreateFormPage = () => {
       <h1>Create New Form</h1>
       <p>insert the backend form stuff</p>
       <div>
+        <label htmlFor="patient-select">Select Patient Group:</label>
+        <select id="patient-select" name="patient-group">
+          <option value="all">All Patients</option>
+          <option value="some">Some Patients</option>
+        </select>
+      </div>
+      <div>
         <button>Send Form</button>
         
       </div>
