@@ -12,6 +12,7 @@ import DoctorCalendar from './components/admin_components/DoctorCalender';
 import PatientSearch from './components/admin_components/patientSearch';
 import MockForm from './components/user_components/MockForm'
 import MapView from './components/user_components/MapView.jsx'
+import AdminNewRegistration from './components/admin_components/AdminNewRegistration.tsx';
 
 function App() {
   const location = useLocation();
@@ -21,13 +22,14 @@ function App() {
     <>
       {location.pathname !== "/" && <Navbar></Navbar>} 
       <Routes>
-        <Route path="/" element={<LoginScreen />} />
-        <Route path="/forms" element={<></>} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/profile" element={<></>} />
-        <Route path="/clinics" element={<MapView />} />
-        <Route path="/page/user" element={<UserHome />} />
-        <Route path="/page/admin" element={<Dashboard />} />
+        <Route path="/" element={<LoginScreen/>}/>
+        <Route path="/forms" element={<></>}/>
+        <Route path="/dashboard" element={<Dashboard/>}/>
+        <Route path="/profile" element={<AdminNewRegistration/>}/>
+        <Route path="/clinics" element={<MapView/>}/>
+        <Route path="/page/user" element={<UserHome/>}/>
+        <Route path="/page/admin" element={<Dashboard/>}/>
+
         <Route path="/formsPage" element={<FormsPage />} />
         <Route path="/create-form" element={<CreateFormPage />} />
         <Route path="/form/:formName" element={<FormDetail />} />
