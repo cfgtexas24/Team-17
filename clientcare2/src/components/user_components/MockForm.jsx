@@ -34,9 +34,19 @@ export default function MockForm() {
             </div>
           ))}
           <div>
-            <button className="bg-white text-purple-500 border border-purple-500 rounded px-4 py-2 hover:bg-purple-100">
-              Submit Form
-            </button>
+          <button
+  className="form-box block mx-auto p-4 border border-gray-300 rounded shadow text-white font-bold"
+  style={{ transition: 'background-color 0.3s, color 0.3s', backgroundColor: '#4c8f97' }}
+    onMouseEnter={(e) => {
+      e.currentTarget.style.backgroundColor = '#ffffff'
+      e.currentTarget.style.color = '#4c8f97'
+    }}
+    onMouseLeave={(e) => {
+      e.currentTarget.style.backgroundColor = '#4c8f97'
+      e.currentTarget.style.color = '#ffffff'
+    }}>
+  Submit Form
+</button>
           </div>
         </div>
       )
