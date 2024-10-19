@@ -61,14 +61,14 @@ export default function CreateForm() {
                 type="text"
                 value={question.value}
                 onChange={(e) => handleQuestionChange(index, e.target.value)}
-                className="block w-full p-2 border border-gray-300 rounded bg-white text-black"
+                className="block w-full p-2 border rounded bg-white text-black"
                 placeholder={`Question ${index + 1}`}
               />
             </div>
           ))}
           <button
             onClick={addQuestion}
-            className="border rounded px-4 py-2 mb-4"
+            className="border rounded px-4 py-2 mb-4 text-white"
             style={{ transition: 'background-color 0.3s, color 0.3s', backgroundColor: '#a26b61' }}
             onMouseEnter={(e) => {
               e.currentTarget.style.backgroundColor = '#ffffff'
