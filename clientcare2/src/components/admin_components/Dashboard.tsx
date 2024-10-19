@@ -33,7 +33,7 @@ const Dashboard = () => {
     };
 
     return (
-      <div className="container">
+      <div className="container" style={{ backgroundColor: '#3e6967'}}>
         {/* Left side for Patient Information */}
         <div className="left-side">
           {/* Icon and Name */}
@@ -43,7 +43,7 @@ const Dashboard = () => {
           </div>
   
           {/* Patient details */}
-          <div className="patient-details">
+          <div className="patient-details"> 
             <div><strong>Patient ID Number:</strong> </div>
 
             <div><strong>Status:</strong> </div>
