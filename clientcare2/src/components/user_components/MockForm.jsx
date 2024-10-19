@@ -10,7 +10,10 @@ const questions = [
 
 export default function MockForm() {
     return (
-        <div className="p-4">
+      <div className="flex min-h-screen relative">
+      <div className="fixed left-0 w-1/5 h-full" style={{ backgroundColor: '#3a696e' }}></div>
+      <div className="w-3/5 p-4 mx-auto">
+        <div className="mb-4 shadow-top">
           <h1 className="text-2xl font-bold mb-4">Post Childbirth Education Class Survey</h1>
           {questions.map((question, index) => (
             <div key={index} className="block w-full p-2 border border-gray-300 rounded bg-white text-black mb-4">
@@ -34,10 +37,23 @@ export default function MockForm() {
             </div>
           ))}
           <div>
-            <button className="bg-white text-purple-500 border border-purple-500 rounded px-4 py-2 hover:bg-purple-100">
-              Submit Form
-            </button>
+          <button
+  className="form-box block mx-auto p-4 border border-gray-300 rounded shadow text-white font-bold"
+  style={{ transition: 'background-color 0.3s, color 0.3s', backgroundColor: '#4c8f97' }}
+    onMouseEnter={(e) => {
+      e.currentTarget.style.backgroundColor = '#ffffff'
+      e.currentTarget.style.color = '#4c8f97'
+    }}
+    onMouseLeave={(e) => {
+      e.currentTarget.style.backgroundColor = '#4c8f97'
+      e.currentTarget.style.color = '#ffffff'
+    }}>
+  Submit Form
+</button>
           </div>
+        </div>
+        </div>
+        <div className="fixed right-0 w-1/5 h-full" style={{ backgroundColor: '#3a696e' }}></div>
         </div>
       )
 }

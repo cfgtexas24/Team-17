@@ -10,31 +10,30 @@ const Dashboard = () => {
             alignItems: 'center',
             justifyContent: 'flex-start', /* Align items at the top */
             height: '100vh',
-            backgroundColor: '#f5f5f5',
+            backgroundColor: '#3e6967',
             fontFamily: 'Arial, sans-serif',
             padding: '20px',
             borderRadius: '10px',
-            backgroundColor: 'white',
             boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
             textAlign: 'center',
             marginTop: '20px' /* Add a margin to push it slightly down from the top */
         },
         heading: {
             fontSize: '2.5rem',
-            color: '#333',
+            color: '#3e6967',
             marginBottom: '10px',
             textTransform: 'uppercase',
             letterSpacing: '2px'
         },
         paragraph: {
             fontSize: '1.2rem',
-            color: '#666',
+            color: '#3e6967',
             marginTop: '0'
         }
     };
 
     return (
-      <div className="container">
+      <div className="container" style={{ backgroundColor: '#3e6967'}}>
         {/* Left side for Patient Information */}
         <div className="left-side">
           {/* Icon and Name */}
@@ -44,7 +43,7 @@ const Dashboard = () => {
           </div>
   
           {/* Patient details */}
-          <div className="patient-details">
+          <div className="patient-details"> 
             <div><strong>Patient ID Number:</strong> </div>
 
             <div><strong>Status:</strong> </div>
