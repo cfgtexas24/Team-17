@@ -51,9 +51,21 @@ export default function CreateForm() {
             value={formTitle}
             onChange={(e) => setFormTitle(e.target.value)}
             className="block mx-auto mb-4 p-2 border border-gray-300 rounded w-full text-black bg-white"
+            placeholder={`Form Title`}
           />
         </div>
         <div className="mb-4">
+          {questions.map((question, index) => (
+            <div key={index} className="mb-2">
+              <input
+                type="text"
+                value={question.value}
+                onChange={(e) => handleQuestionChange(index, e.target.value)}
+                className="block w-full p-2 border border-gray-300 rounded bg-white text-black"
+                placeholder={`Question ${index + 1}`}
+              />
+            </div>
+          ))}
           <button
             onClick={addQuestion}
             className="border rounded px-4 py-2 mb-4"
@@ -68,17 +80,6 @@ export default function CreateForm() {
             }}>
             + Add Question
           </button>
-          {questions.map((question, index) => (
-            <div key={index} className="mb-2">
-              <input
-                type="text"
-                value={question.value}
-                onChange={(e) => handleQuestionChange(index, e.target.value)}
-                className="block w-full p-2 border border-gray-300 rounded bg-white text-black"
-                placeholder={`Question ${index + 1}`}
-              />
-            </div>
-          ))}
         </div>
         <div>
           <label htmlFor="receipients-title" className="block text-center mb-2 font-bold">Choose Form Recipients:</label>
