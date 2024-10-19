@@ -7,7 +7,7 @@ const Navbar = () => {
           <h1 className='text-3xl font-bold text-[#3a696e]'>Abide and Seek</h1>
           <div className='flex flex-row justify-evenly'>
             <Link to="/" className='text-[#3d251e] font-semibold p-2 ml-2 mr-4 hover:text-white hover:bg-[#3a696e] hover:bg-opacity-65 rounded-lg'>Home</Link>
-            <Link to="/formsPage" className='text-[#3d251e] font-semibold p-2 ml-2 mr-4 hover:text-white hover:bg-[#3a696e] hover:bg-opacity-65 rounded-lg'>Forms</Link>
+            <Link to="/forms" className='text-[#3d251e] font-semibold p-2 ml-2 mr-4 hover:text-white hover:bg-[#3a696e] hover:bg-opacity-65 rounded-lg'>Forms</Link>
             <Link to="/dashboard" className='text-[#3d251e] font-semibold p-2 ml-2 mr-4 hover:text-white hover:bg-[#3a696e] hover:bg-opacity-65 rounded-lg'>Dashboard</Link>
             <Link to="/profile" className='text-[#3d251e] font-semibold p-2 ml-2 mr-2 hover:text-white hover:bg-[#3a696e] hover:bg-opacity-65 rounded-lg'>Profile</Link>
             <Link to="/calendar" className='text-[#3d251e] font-semibold p-2 ml-2 mr-2 hover:text-white hover:bg-[#3a696e] hover:bg-opacity-65 rounded-lg'>Appointment Calendar</Link>
