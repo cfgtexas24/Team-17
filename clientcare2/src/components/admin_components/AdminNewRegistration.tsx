@@ -26,6 +26,7 @@ const AdminNewRegistration: React.FC = () => {
     };
 
     return (
+    
         <div>
             <h1  className= 'custom-h1'>Patient Management</h1>
             <p>Welcome to patient management.</p>
