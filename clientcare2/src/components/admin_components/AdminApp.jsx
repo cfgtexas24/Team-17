@@ -54,7 +54,7 @@ function AdminApp() {
       <nav className="bg-gray-800 flex flex-col items-center py-4 px-2 w-16">
         <SideNavButton to="/" icon={<FaHome size={24} />} tooltip="Home" />
         <SideNavButton to="/dashboard" icon={<FaChartBar size={24} />} tooltip="Dashboard" />
-        <SideNavButton to="/reports" icon={<FaClipboardList size={24} />} tooltip="Reports" />
+        <SideNavButton to="/forms" icon={<FaClipboardList size={24} />} tooltip="Forms" />
         <SideNavButton to="/profile" icon={<FaUserCircle size={24} />} tooltip="Profile" />
       </nav>
     </div>
