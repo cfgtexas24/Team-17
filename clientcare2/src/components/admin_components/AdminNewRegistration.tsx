@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import PatientChart from '../../backend/dashboard/PatientChart';
 import AddPatientForm from '../../backend/dashboard/AddPatientForm';
 import { Patient } from '../../backend/dashboard/interfaces'; 
+import "./AdminNewRegistration.css"
 
 const AdminNewRegistration: React.FC = () => {
     const [patients, setPatients] = useState<Patient[]>([]); // State to hold patient data
