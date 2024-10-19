@@ -7,21 +7,21 @@ const LoginScreen = () => {
 
   const handleLogin = (role: string) => {
     if (role === 'user') {
-      navigate('/page/user');
+      navigate('/user');
     } else if (role === 'admin') {
-      navigate('/page/admin');
+      navigate('/admin');
     }
   };
 
   return (
     <div className='login-page'>
-      <h1>Login Page</h1>
+      <h1>Abide Women's Health Center Log In</h1>
       <div className="button-group">
         <button className='login-btn' onClick={() => handleLogin('user')}>
-          Log in User
+          User Log in 
         </button>
         <button className='login-btn' onClick={() => handleLogin('admin')}>
-          Log in Admin
+          Admin Log in
         </button>
       </div>
     </div>
