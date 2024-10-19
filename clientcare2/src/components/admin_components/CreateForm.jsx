@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import Select from 'react-select'
 import {createForm} from '../../backend/googleFormsAPI/requests'
-
 /************************************************** */
 // PULL THESE FROM THE BACKEND
 const patientOptions = [
@@ -31,7 +30,7 @@ export default function CreateForm() {
 
   const handleCreateForm = async () => {
     setLoading(true)
-    await createForm()
+    createForm();
     setLoading(false)
   }
 
