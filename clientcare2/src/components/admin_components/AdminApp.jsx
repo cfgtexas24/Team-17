@@ -3,7 +3,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import { FaChartBar, FaClipboardList, FaUserCircle, FaHome } from 'react-icons/fa';
 
 import Dashboard from "./AdminDashBoard";
-import Reports from "./AdminReports";
+import Reports from "./NewForm";
 import Profile from "./AdminProfile";
 
 const SideNavButton = ({ to, icon, tooltip }) => {
