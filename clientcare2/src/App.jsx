@@ -6,6 +6,7 @@ import Navbar from './components/user_components/Navbar'
 import FormsPage from './components/admin_components/NewForm'
 import CreateFormPage from './components/admin_components/CreateForm'
 import FormDetail from './components/admin_components/FormDetail'
+import Dashboard from './components/admin_components/Dashboard.tsx';
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path="/" element={<UserHome/>}/>
-        <Route path="/dashboard" element={<></>}/>
+        <Route path="/forms" element={<></>}/>
+        <Route path="/dashboard" element={<Dashboard/>}/>
         <Route path="/profile" element={<></>}/>
 
         <Route path="/forms" element={<FormsPage/>}/>
