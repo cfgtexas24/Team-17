@@ -32,6 +32,12 @@ const CreateFormPage = () => {
   return (
     <div>
       <h1>Create New Form</h1>
+      <p>insert the backend form stuff</p>
+      <div>
+        <button>Send Form</button>
+        
+      </div>
+      
     </div>
   )
 }
