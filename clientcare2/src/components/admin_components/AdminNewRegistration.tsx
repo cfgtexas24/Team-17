@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import PatientChart from '../../backend/dashboard/PatientChart';
 import AddPatientForm from '../../backend/dashboard/AddPatientForm';
-import { Patient } from '../../backend/dashboard/interfaces'; 
+import { Patient } from '../../backend/dashboard/interfaces';
+import "./AdminNewRegistration.css" 
 
 
 const AdminNewRegistration: React.FC = () => {
@@ -26,7 +27,7 @@ const AdminNewRegistration: React.FC = () => {
 
     return (
         <div>
-            <h1>Patient Management</h1>
+            <h1  className= 'custom-h1'>Patient Management</h1>
             <p>Welcome to patient management.</p>
             
             <AddPatientForm onAddPatient={handleAddPatient} />
