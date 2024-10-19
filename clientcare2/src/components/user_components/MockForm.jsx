@@ -10,7 +10,10 @@ const questions = [
 
 export default function MockForm() {
     return (
-        <div className="p-4">
+      <div className="flex min-h-screen relative">
+      <div className="fixed left-0 w-1/5 h-full" style={{ backgroundColor: '#3a696e' }}></div>
+      <div className="w-3/5 p-4 mx-auto">
+        <div className="mb-4 shadow-top">
           <h1 className="text-2xl font-bold mb-4">Post Childbirth Education Class Survey</h1>
           {questions.map((question, index) => (
             <div key={index} className="block w-full p-2 border border-gray-300 rounded bg-white text-black mb-4">
@@ -48,6 +51,9 @@ export default function MockForm() {
   Submit Form
 </button>
           </div>
+        </div>
+        </div>
+        <div className="fixed right-0 w-1/5 h-full" style={{ backgroundColor: '#3a696e' }}></div>
         </div>
       )
 }
