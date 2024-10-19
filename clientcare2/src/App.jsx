@@ -1,29 +1,28 @@
-import { useState } from 'react'
-import './App.css'
-import UserHome from './components/user_components/UserHome'
-import LoginFunc from './components/login_screen/loginScreen'
-import { Route, Routes } from 'react-router-dom'
-import Navbar from './components/user_components/Navbar'
-import FormsPage from './components/admin_components/NewForm'
-import CreateFormPage from './components/admin_components/CreateForm'
-import FormDetail from './components/admin_components/FormDetail'
-import Dashboard from './components/admin_components/Dashboard.tsx';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import HomePage from './components/HomePage';
+import AdminApp from './components/admin_components/AdminApp';
+import UserHome from './components/user_components/UserHome';
+// TODO: Import CustomerHome component when you have it
 
-function App() {
+const App = () => {
   return (
-    <>
-      <Navbar/>
+    <Router>
       <Routes>
-        <Route path="/" element={<UserHome/>}/>
-        <Route path="/dashboard" element={<></>}/>
-        <Route path="/profile" element={<></>}/>
-
-        <Route path="/forms" element={<FormsPage/>}/>
-        <Route path="/create-form" element={<CreateFormPage />} />
-        <Route path="/form/:formName" element={<FormDetail />} />
+        {/* Home page route */}
+        <Route path="/" element={<HomePage />} />
+        
+        {/* Admin routes */}
+        <Route path="/admin/*" element={<AdminApp />} />
+        
+        {/* User routes */}
+        <Route path="/user/*" element={<UserHome />} />
+        
+        {/* TODO: Add customer routes when you have the component */}
+        {/* <Route path="/customer/*" element={<CustomerHome />} /> */}
       </Routes>
-    </>
-  )
-}
+    </Router>
+  );
+};
 
-export default App
+export default App;

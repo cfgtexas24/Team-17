@@ -6,6 +6,7 @@ import UserInboxCard from './UserInboxCard'
 const UserHome = () => {
   return (
     <>
+      <Navbar />
       <div className='flex flex-row justify-evenly'>
         <UserProfileCard />
         <UserInboxCard />
