@@ -12,9 +12,14 @@ interface Appointment {
 }
 // Sample data
 const appointments: Appointment[] = [
-  { id: 1, date: new Date(2024, 9, 20), patientName: 'Sarah Doe', time: '10:00 AM', reason: 'Monthly Check Ups' },
-  { id: 2, date: new Date(2024, 9, 20), patientName: 'Jane Smith', time: '11:30 AM', reason: 'Pre Natal Check Up' },
-  { id: 3, date: new Date(2024, 9, 21), patientName: 'Sam Green', time: '09:00 AM', reason: 'Genetic Screening' },
+  { id: 4, date: new Date(2024, 9, 21), patientName: 'Emily White', time: '10:30 AM', reason: 'Ultrasound' },
+{ id: 5, date: new Date(2024, 9, 21), patientName: 'Olivia Brown', time: '01:00 PM', reason: 'Gestational Diabetes Screening' },
+{ id: 6, date: new Date(2024, 9, 22), patientName: 'Sophia Davis', time: '09:45 AM', reason: 'Routine Pregnancy Check Up' },
+{ id: 7, date: new Date(2024, 9, 22), patientName: 'Lily Johnson', time: '11:00 AM', reason: 'Fetal Growth Monitoring' },
+{ id: 8, date: new Date(2024, 9, 23), patientName: 'Ava Martinez', time: '02:30 PM', reason: 'Third Trimester Check Up' },
+{ id: 9, date: new Date(2024, 9, 23), patientName: 'Ella Wilson', time: '08:00 AM', reason: 'Labor and Delivery Planning' },
+{ id: 10, date: new Date(2024, 9, 24), patientName: 'Mia Thomas', time: '10:15 AM', reason: 'Postpartum Follow Up' }
+
 ];
 // The Calendar component
 const DoctorCalendar: React.FC = () => {

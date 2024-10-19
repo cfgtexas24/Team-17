@@ -21,28 +21,116 @@ interface PatientInfo {
 const patients: PatientInfo[] = [
   {
     id: 1,
-    name: 'John Doe',
-    age: 45,
-    gender: 'Male',
+    name: 'Sarah Doe',
+    age: 32,
+    gender: 'Female',
     contact: '555-1234',
     address: '123 Main St, Springfield, USA',
     medicalRecords: [
-      { date: '2024-09-10', diagnosis: 'Hypertension', treatment: 'Medication' },
+      { date: '2024-09-20', diagnosis: 'Monthly Check Up', treatment: 'Routine examination' },
     ],
   },
   {
     id: 2,
-    name: 'Jane Doe',
-    age: 34,
+    name: 'Jane Smith',
+    age: 28,
     gender: 'Female',
     contact: '555-9876',
     address: '456 Maple St, Springfield, USA',
     medicalRecords: [
-      { date: '2024-08-20', diagnosis: 'Allergy', treatment: 'Antihistamines' },
+      { date: '2024-09-20', diagnosis: 'Prenatal Check Up', treatment: 'Ultrasound and consultation' },
     ],
   },
-  // Add more patient objects
+  {
+    id: 3,
+    name: 'Sam Green',
+    age: 30,
+    gender: 'Female',
+    contact: '555-5432',
+    address: '789 Oak St, Springfield, USA',
+    medicalRecords: [
+      { date: '2024-09-21', diagnosis: 'Genetic Screening', treatment: 'Blood test and counseling' },
+    ],
+  },
+  {
+    id: 4,
+    name: 'Emily White',
+    age: 27,
+    gender: 'Female',
+    contact: '555-6789',
+    address: '321 Pine St, Springfield, USA',
+    medicalRecords: [
+      { date: '2024-09-21', diagnosis: 'Ultrasound', treatment: 'Routine ultrasound check' },
+    ],
+  },
+  {
+    id: 5,
+    name: 'Olivia Brown',
+    age: 33,
+    gender: 'Female',
+    contact: '555-2468',
+    address: '654 Elm St, Springfield, USA',
+    medicalRecords: [
+      { date: '2024-09-21', diagnosis: 'Gestational Diabetes Screening', treatment: 'Glucose tolerance test' },
+    ],
+  },
+  {
+    id: 6,
+    name: 'Sophia Davis',
+    age: 29,
+    gender: 'Female',
+    contact: '555-1357',
+    address: '987 Cedar St, Springfield, USA',
+    medicalRecords: [
+      { date: '2024-09-22', diagnosis: 'Routine Pregnancy Check Up', treatment: 'Blood pressure check and consultation' },
+    ],
+  },
+  {
+    id: 7,
+    name: 'Lily Johnson',
+    age: 31,
+    gender: 'Female',
+    contact: '555-8642',
+    address: '111 Birch St, Springfield, USA',
+    medicalRecords: [
+      { date: '2024-09-22', diagnosis: 'Fetal Growth Monitoring', treatment: 'Ultrasound and measurements' },
+    ],
+  },
+  {
+    id: 8,
+    name: 'Ava Martinez',
+    age: 26,
+    gender: 'Female',
+    contact: '555-9753',
+    address: '222 Willow St, Springfield, USA',
+    medicalRecords: [
+      { date: '2024-09-23', diagnosis: 'Third Trimester Check Up', treatment: 'Routine examination and consultation' },
+    ],
+  },
+  {
+    id: 9,
+    name: 'Ella Wilson',
+    age: 35,
+    gender: 'Female',
+    contact: '555-8645',
+    address: '333 Poplar St, Springfield, USA',
+    medicalRecords: [
+      { date: '2024-09-23', diagnosis: 'Labor and Delivery Planning', treatment: 'Discussion and planning for delivery' },
+    ],
+  },
+  {
+    id: 10,
+    name: 'Mia Thomas',
+    age: 30,
+    gender: 'Female',
+    contact: '555-1359',
+    address: '444 Ash St, Springfield, USA',
+    medicalRecords: [
+      { date: '2024-09-24', diagnosis: 'Postpartum Follow Up', treatment: 'Health assessment and recovery plan' },
+    ],
+  },
 ];
+
 
 const PatientSearch: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>('');
