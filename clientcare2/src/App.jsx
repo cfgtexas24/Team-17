@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import UserHome from './components/user_components/UserHome'
-import LoginFunc from './components/login_screen/loginScreen'
+import LoginScreen from './components/login_screen/loginScreen'
 import { Route, Routes } from 'react-router-dom'
 import Navbar from './components/user_components/Navbar'
 import FormsPage from './components/admin_components/NewForm'
@@ -14,14 +14,13 @@ function App() {
     <>
       <Navbar/>
       <Routes>
-        <Route path="/" element={<LoginFunc/>}/>
+        <Route path="/" element={<LoginScreen/>}/>
         <Route path="/forms" element={<></>}/>
         <Route path="/dashboard" element={<Dashboard/>}/>
         <Route path="/profile" element={<></>}/>
         <Route path="/page/user" element={<UserHome/>}/>
-        <Route path="/page/admin" element={<Dashboard/>}/>
 
-        <Route path="/formsPage" element={<FormsPage/>}/>
+        <Route path="/forms" element={<FormsPage/>}/>
         <Route path="/create-form" element={<CreateFormPage />} />
         <Route path="/form/:formName" element={<FormDetail />} />
       </Routes>

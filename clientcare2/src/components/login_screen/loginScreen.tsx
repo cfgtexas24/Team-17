@@ -7,9 +7,9 @@ const LoginScreen = () => {
 
   const handleLogin = (role: string) => {
     if (role === 'user') {
-      navigate('/user-home');
+      navigate('/page/user');
     } else if (role === 'admin') {
-      navigate('/admin-home');
+      navigate('/page/admin');
     }
   };
 
