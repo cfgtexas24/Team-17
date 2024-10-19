@@ -1,8 +1,8 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import UserHome from './components/user_components/UserHome';
 import LoginScreen from './components/login_screen/loginScreen';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import Navbar from './components/user_components/Navbar';
 import FormsPage from './components/admin_components/NewForm';
 import CreateFormPage from './components/admin_components/CreateForm';
@@ -13,27 +13,37 @@ import PatientSearch from './components/admin_components/patientSearch';
 import MockForm from './components/user_components/MockForm'
 import MapView from './components/user_components/MapView.jsx'
 
-
 function App() {
+  const location = useLocation();
+  const [showNavbar, setShowNavbar] = useState(null);
+
+  useEffect(() => {
+    
+    if (location.pathname == "/"){
+      setShowNavbar(null)
+    } else{
+      setShowNavbar(<Navbar></Navbar>)
+    }
+  })
+
+  
   return (
     <>
-      
+      {showNavbar} 
       <Routes>
-        <Route path="/" element={<LoginScreen/>}/>
-        <Route path="/forms" element={<></>}/>
-        <Route path="/dashboard" element={<Dashboard/>}/>
-        <Route path="/profile" element={<></>}/>
-        <Route path="/clinics" element={<MapView/>}/>
-        <Route path="/page/user" element={<UserHome/>}/>
-        <Route path="/page/admin" element={<Dashboard/>}/>
-
+        <Route path="/" element={<LoginScreen />} />
+        <Route path="/forms" element={<></>} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/profile" element={<></>} />
+        <Route path="/clinics" element={<MapView />} />
+        <Route path="/page/user" element={<UserHome />} />
+        <Route path="/page/admin" element={<Dashboard />} />
         <Route path="/formsPage" element={<FormsPage />} />
         <Route path="/create-form" element={<CreateFormPage />} />
         <Route path="/form/:formName" element={<FormDetail />} />
         <Route path="/calendar" element={<DoctorCalendar />} />
-        <Route path="/patientsearch" element={<PatientSearch/>}/>
+        <Route path="/patientsearch" element={<PatientSearch />} />
         <Route path="/form/mockForm" element={<MockForm />} />
-
       </Routes>
     </>
   );
