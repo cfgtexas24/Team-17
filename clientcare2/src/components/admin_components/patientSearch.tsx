@@ -175,8 +175,8 @@ const PatientSearch: React.FC = () => {
   }, [searchTerm, searchField]);
 
   return (
-    <div style={{ padding: '25px', fontFamily: 'Arial, sans-serif' }}>
-      <h1 style={{ color: '#3e6967' }}>Patient Search</h1>
+    <div className="mt-4" style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
+      <h2 className='text-3xl mb-7 font-bold text-[#3a696e]'>Patient Search</h2>
 
       {/* Search Input */}
       <input
@@ -204,29 +204,40 @@ const PatientSearch: React.FC = () => {
         <option value="medicalRecords">Medical Records</option>
       </select>
 
-      <div style={{ marginTop: '20px' }}>
+      <div className="" style={{ marginTop: '20px' }}>
         <h2>Filtered Patients</h2>
-        {filteredPatients.length > 0 ? (
-          filteredPatients.map((patient) => (
-            <div key={patient.id} style={{ borderBottom: '1px solid #ccc', marginBottom: '10px', paddingBottom: '10px' }}>
-              <p><strong>Name:</strong> {patient.name}</p>
-              <p><strong>Age:</strong> {patient.age}</p>
-              <p><strong>Gender:</strong> {patient.gender}</p>
-              <p><strong>Contact:</strong> {patient.contact}</p>
-              <p><strong>Address:</strong> {patient.address}</p>
-              <h3>Medical Records:</h3>
-              {patient.medicalRecords.map((record, index) => (
-                <div key={index}>
-                  <p><strong>Date:</strong> {record.date}</p>
-                  <p><strong>Diagnosis:</strong> {record.diagnosis}</p>
-                  <p><strong>Treatment:</strong> {record.treatment}</p>
+        <div className='flex flex-col'>
+          {filteredPatients.length > 0 ? (
+            filteredPatients.map((patient) => (
+              <div key={patient.id} className="w-5/7 pt-4 rounded-lg bg-slate-200 flex flex-row justify-evenly mb-5" style={{ borderBottom: '1px solid #ccc', marginBottom: '10px', paddingBottom: '10px' }}>
+                <div className='text-left'>
+                  <p><strong>Name:</strong> {patient.name}</p>
+                  <p><strong>Age:</strong> {patient.age}</p>
                 </div>
-              ))}
-            </div>
-          ))
-        ) : (
-          <p>No patients found matching the criteria.</p>
-        )}
+                <div className='text-left'>
+                  <p><strong>Gender:</strong> {patient.gender}</p>
+                  <p><strong>Contact:</strong> {patient.contact}</p>
+                </div>
+                <div className=''>
+                <h3 className='font-bold mb-2'>Medical Records:</h3>
+                {patient.medicalRecords.map((record, index) => (
+                  <div className="text-left" key={index}>
+                    <p><strong>Date:</strong> {record.date}</p>
+                    <p><strong>Diagnosis:</strong> {record.diagnosis}</p>
+                    <p><strong>Treatment:</strong> {record.treatment}</p>
+                  </div>
+                ))}
+                </div>
+                <div>
+                  <p><strong>Address:</strong> {patient.address}</p>
+                </div>
+              </div>
+            ))
+          ) : (
+            <p>No patients found matching the criteria.</p>
+          )}
+        </div>
+        
       </div>
     </div>
   );

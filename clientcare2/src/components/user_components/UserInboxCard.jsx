@@ -16,9 +16,9 @@ const clickForm = (formId) => {
 const UserInboxCard = () => {
   return (
     <>
-    <div className="shadow-lg mt-32 bg-gray-100 rounded-lg p-6 w-2/5 h-72">
-          <h2 className="text-xl flex font-semibold mb-4 items-center">
-            <Bell className="mr-7" />
+    <div className="shadow-lg mt-32 bg-[#5c8489] rounded-lg p-6 w-2/5 h-96">
+          <h2 className="text-white text-xl flex font-semibold mb-4 items-center">
+            <Bell className="mr-7 text-white" />
             Notification Inbox
           </h2>
           <ul>

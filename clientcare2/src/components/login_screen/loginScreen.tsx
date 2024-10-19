@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom'; 
 
-const LoginFunc = () => {
+const LoginScreen = () => {
   const navigate = useNavigate(); 
 
 
@@ -31,4 +31,4 @@ const LoginFunc = () => {
   );
 }
 
-export default LoginFunc;
+export default LoginScreen;

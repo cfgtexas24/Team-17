@@ -68,7 +68,7 @@ export default function CreateForm() {
           ))}
           <button
             onClick={addQuestion}
-            className="border rounded px-4 py-2 mb-4 text-white"
+            className="border rounded px-4 py-2 mb-4 text-white border-gray-300"
             style={{ transition: 'background-color 0.3s, color 0.3s', backgroundColor: '#a26b61' }}
             onMouseEnter={(e) => {
               e.currentTarget.style.backgroundColor = '#ffffff'
