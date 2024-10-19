@@ -8,6 +8,7 @@ import FormsPage from './components/admin_components/NewForm'
 import CreateFormPage from './components/admin_components/CreateForm'
 import FormDetail from './components/admin_components/FormDetail'
 import Dashboard from './components/admin_components/Dashboard.tsx';
+import MapView from './components/user_components/MapView.jsx'
 
 function App() {
   return (
