@@ -1,24 +1,21 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom';
+import './LoginScreen.css'; // Import the CSS file
 
-const LoginFunc = () => {
-  const navigate = useNavigate(); 
+const LoginScreen = () => {
+  const navigate = useNavigate();
 
-
-  // THE WAY IT WORKS:
-  // this function will reroute you to user or admin depending on what you click, the button at the bottom will give the 2 options to go user or admin
-
-  const handleLogin = (role) => {
+  const handleLogin = (role: string) => {
     if (role === 'user') {
-      navigate('/page/user'); 
+      navigate('/user-home');
     } else if (role === 'admin') {
-      navigate('/page/admin'); 
+      navigate('/admin-home');
     }
   };
 
   return (
     <div className='login-page'>
-      <h2>Login Page</h2>
+      <h1>Login Page</h1>
       <div className="button-group">
         <button className='login-btn' onClick={() => handleLogin('user')}>
           Log in User
@@ -29,6 +26,6 @@ const LoginFunc = () => {
       </div>
     </div>
   );
-}
+};
 
-export default LoginFunc;
+export default LoginScreen;
