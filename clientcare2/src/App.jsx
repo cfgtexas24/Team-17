@@ -13,9 +13,10 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path="/" element={<UserHome/>}/>
-        <Route path="/forms" element={<FormsPage/>}/>
         <Route path="/dashboard" element={<></>}/>
         <Route path="/profile" element={<></>}/>
+
+        <Route path="/forms" element={<FormsPage/>}/>
         <Route path="/create-form" element={<CreateFormPage />} />
         <Route path="/form/:formName" element={<FormDetail />} />
       </Routes>
