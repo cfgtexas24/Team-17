@@ -15,21 +15,11 @@ import MapView from './components/user_components/MapView.jsx'
 
 function App() {
   const location = useLocation();
-  const [showNavbar, setShowNavbar] = useState(null);
 
-  useEffect(() => {
-    
-    if (location.pathname == "/"){
-      setShowNavbar(null)
-    } else{
-      setShowNavbar(<Navbar></Navbar>)
-    }
-  })
 
-  
   return (
     <>
-      {showNavbar} 
+      {location.pathname !== "/" && <Navbar></Navbar>} 
       <Routes>
         <Route path="/" element={<LoginScreen />} />
         <Route path="/forms" element={<></>} />
