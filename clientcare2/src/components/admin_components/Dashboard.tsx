@@ -10,7 +10,7 @@ const Dashboard = () => {
             alignItems: 'center',
             justifyContent: 'flex-start', /* Align items at the top */
             height: '100vh',
-            backgroundColor: '#f5f5f5',
+            backgroundColor: '#3e6967',
             fontFamily: 'Arial, sans-serif',
             padding: '20px',
             borderRadius: '10px',
