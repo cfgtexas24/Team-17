@@ -19,6 +19,7 @@ function App() {
         <Route path="/forms" element={<></>}/>
         <Route path="/dashboard" element={<Dashboard/>}/>
         <Route path="/profile" element={<></>}/>
+        <Route path="/clinics" element={<MapView/>}/>
         <Route path="/page/user" element={<UserHome/>}/>
         <Route path="/page/admin" element={<Dashboard/>}/>
 

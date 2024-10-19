@@ -20,17 +20,57 @@ const patientOptions = [
 export default function CreateForm() {
     const [selectedPatientGroup, setSelectedPatientGroup] = useState('')
   const [showEventDropdown, setShowEventDropdown] = useState(false)
+  const [questions, setQuestions] = useState([])
+  const [formTitle, setFormTitle] = useState('')
 
   const handlePatientGroupChange = (selectedOption) => {
     const value = selectedOption ? selectedOption.value : ''
     setSelectedPatientGroup(value)
     setShowEventDropdown(value === 'patients-who')
   }
+  const addQuestion = () => {
+    setQuestions([...questions, ''])
+  }
+
+  const handleQuestionChange = (index, value) => {
+    const newQuestions = [...questions]
+    newQuestions[index] = value
+    setQuestions(newQuestions)
+  }
 
   return (
     <div className="p-4">
+      <div className="mb-4 shadow-top">
+        <label htmlFor="form-title" className="block text-center mb-2">Form Title:</label>
+        <input
+          id="form-title"
+          type="text"
+          value={formTitle}
+          onChange={(e) => setFormTitle(e.target.value)}
+          className="block mx-auto mb-4 p-2 border border-gray-300 rounded w-1/2 text-black bg-white"
+        />
+      </div>
       <div className="mb-4">
-        <label htmlFor="patient-select" className="block mb-2">Select Patient Group:</label>
+        <button
+          onClick={addQuestion}
+          className="bg-blue-500 text-white rounded-full p-2 mb-4"
+        >
+          + Add Question
+        </button>
+        {questions.map((question, index) => (
+          <div key={index} className="mb-2">
+            <input
+              type="text"
+              value={question}
+              onChange={(e) => handleQuestionChange(index, e.target.value)}
+              className="block w-full p-2 border border-gray-300 rounded bg-white text-black"
+              placeholder={`Question ${index + 1}`}
+            />
+          </div>
+        ))}
+      </div>
+      <div>
+      <label htmlFor="receipients-title" className="block text-center mb-2">Choose Recipients:</label>
         <Select
           id="patient-select"
           name="patient-group"
@@ -45,10 +85,7 @@ export default function CreateForm() {
             options={eventOptions}
             className="mb-4"
           />
-        )}
-      </div>
-      <div>
-        <button className="bg-white text-purple-500 border border-purple-500 rounded px-4 py-2 hover:bg-purple-100">
+        )}        <button className="bg-white text-purple-500 border border-purple-500 rounded px-4 py-2 hover:bg-purple-100">
           Send Form
         </button>
       </div>
