@@ -1,5 +1,6 @@
 import React from 'react';
 import './Dashboard.css';
+import PatientIcon from '../../assets/PatientIcon.png';
 
 const Dashboard = () => {
     return (
@@ -8,7 +9,7 @@ const Dashboard = () => {
         <div className="left-side">
           {/* Icon and Name */}
           <div className="patient-icon">
-            <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngegg.com%2Fen%2Fpng-dptgb&psig=AOvVaw07UROyKwLXEDSuMR_0cVIc&ust=1729409634735000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLCNpI73mYkDFQAAAAAdAAAAABAE" alt="Patient Icon" />
+          <img src={PatientIcon} alt="Patient Icon" />
             <h2>Last Name, First Name</h2>
           </div>
   
