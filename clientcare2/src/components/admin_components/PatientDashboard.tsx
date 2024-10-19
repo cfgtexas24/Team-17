@@ -4,7 +4,7 @@ import PatientIcon from '../../assets/PatientIcon.png';
 
 const PatientDashboard = () => {
   return (
-    <div className="dashboard-container">
+    <div className="dashboard-container" style={{ backgroundColor: '#3e6967'}}>
       {/* Left Side: Patient Information */}
       <div className="left-side">
         <div className="patient-icon">
