@@ -185,7 +185,7 @@ const PatientSearch: React.FC = () => {
         value={searchTerm}
         onChange={handleSearch}
         style={{
-          marginRight: '10px',
+          marginRight: '25px',
           padding: '5px',
           backgroundColor: 'white', // Set input background to white
           border: '1px solid #ccc',
