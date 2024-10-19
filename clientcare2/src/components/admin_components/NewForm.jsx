@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 /***************************************************************************** */
 // PULL THESE FROM THE BACKEND
 const forms = [
-  "New Patient Intake Form",
-  "Survey after Saturday Class"
+  "Survey after Saturday Birthing Class",
+  "Anonymous Feedback Form"
 ];
 
 /************************* */
