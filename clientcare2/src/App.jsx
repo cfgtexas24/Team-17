@@ -8,7 +8,8 @@ import FormsPage from './components/admin_components/NewForm';
 import CreateFormPage from './components/admin_components/CreateForm';
 import FormDetail from './components/admin_components/FormDetail';
 import Dashboard from './components/admin_components/Dashboard';
-import DoctorCalendar from './components/admin_components/DoctorCalender'; // Import the DoctorCalendar component
+import DoctorCalendar from './components/admin_components/DoctorCalender'; 
+import PatientSearch from './components/admin_components/patientSearch';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
 
         {/* Add the new route for the DoctorCalendar component */}
         <Route path="/calendar" element={<DoctorCalendar />} />
+        <Route path="/patientsearch" element={<PatientSearch/>}/>
       </Routes>
     </>
   );
